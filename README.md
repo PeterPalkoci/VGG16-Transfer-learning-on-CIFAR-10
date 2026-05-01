@@ -1,6 +1,6 @@
 # VGG-16 Transfer Learning na CIFAR-10
 
-> Porovnanie stratégií fine-tuningu predtrénovaného VGG-16 (ImageNet) na datasete CIFAR-10 s 10 triedami.
+Porovnanie stratégií fine-tuningu predtrénovaného VGG-16 (ImageNet) na datasete CIFAR-10 s 10 triedami.
 
 ---
 
@@ -32,7 +32,7 @@ Architektúra: **VGG-16** predtrénovaný na ImageNet, klasifikačná hlava nahr
 |-----------|-------------------|
 | GPU | NVIDIA GPU s CUDA podporou (testované na RTX 4060, 8.6 GB VRAM) |
 | RAM | 8 GB+ |
-| Disk | ~1 GB pre dataset CIFAR-10 + modely |
+| Disk | ~50 GB pre spustenie všetkých experimentov |
 
 > Bez GPU sú niektoré experimenty (najmä E5 – Full fine-tuning) extrémne pomalé. E5 trvalo na RTX 4060 ~900 minút.
 
@@ -71,7 +71,7 @@ source venv/bin/activate
 
 ### 3. Inštalácia PyTorch s CUDA podporou
 ```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+https://developer.nvidia.com/cuda-downloads
 ```
 
 > Pre CPU-only verziu (pomalšie):
@@ -153,9 +153,10 @@ Train: 45,000 | Val: 5,000 | Test: 10,000
 ```
 
 ### Krok 5 – Spustenie experimentov
+
 Každý experiment sa spúšťa samostatnou bunkou. Výsledky (váhy `.pth` a história `.json`) sa ukladajú do `./results/`.
 Vizualizačné sekcie vyžadújú aby boli výsledky experimentov uložené v ./results/.
----
+
 
 ## Experimenty
 
