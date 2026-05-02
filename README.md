@@ -91,6 +91,7 @@ pip install -r requirements.txt
 ```
 project/
 ├── VGG-16_CODE.ipynb   # Hlavný notebook so všetkým kódom
+├── VGG-16_2xT4.ipynb   # notebook na trénovanie na Kaggle na 2xT4
 ├── data/               # CIFAR-10 sa stiahne automaticky sem
 └── results/            # Výstupné súbory (modely, JSON histórie, grafy)
     ├── E1_-_Frozen_feature_extraction_best.pth
